@@ -10,6 +10,10 @@ class PostTest < ActiveSupport::TestCase
     @post = Post.new(link: 'hey', user_id: 1)
   end
 
+  test 'post should be valid' do
+    assert_not @post.valid?
+  end
+
   test "post should'nt be empty" do
     @post.link = ''
     assert_not @post.valid?

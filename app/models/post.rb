@@ -3,4 +3,5 @@
 class Post < ApplicationRecord
   belongs_to :user
   validates :link, presence: true, length: { maximum: 140 }
+  has_many :comments
 end
